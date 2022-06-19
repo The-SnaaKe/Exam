@@ -9,7 +9,7 @@ int main() {
     int i, j, m, n;
     cout << "Введи количество столбцов : "; cin >> m;
     cout << "Введи количество строк : "; cin >> n;
-    int buff, y, u;
+    int buff;
 
     int** arr = new int* [m];
 
