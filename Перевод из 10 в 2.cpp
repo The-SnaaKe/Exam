@@ -3,21 +3,20 @@
 using namespace std;
 
 int main(){
-    int binaryNumber = 0;
-    int ost, i = 1, step = 1;
+    int tenNumber = 0;
     setlocale(LC_ALL, "RUS");
     int n;
 
-    cout << "Введите 10чное число: ";
+    cout << "Введите 2чное число: ";
     cin >> n;
-    int tenNumber = n;
+    int twoNumber = n;
+    int decimalNumber = 0, i = 0, ost;
     while (n != 0)
     {
-        ost = n % 2;
-        cout << "Шаг " << step++ << ": " << n << "/2, Остаток = " << ost << ", Коэффициент = " << n / 2 << endl;
-        n /= 2;
-        binaryNumber += ost * i;
-        i *= 10;
+        ost = n % 10;
+        n /= 10;
+        tenNumber += ost * pow(2, i);
+        ++i;
     }
-    cout << tenNumber << " в десятиной = " << binaryNumber << " в двоичной\n";
+    cout << twoNumber << " в десятиной = " << tenNumber << " в двоичной\n";
 }
