@@ -9,7 +9,7 @@ int main() {
     int i, j, m, n;
     cout << "Введи количество столбцов : "; cin >> m;
     cout << "Введи количество строк : "; cin >> n;
-    int buff, y, u;
+    int buff;
 
     int** arr = new int* [m];
 
@@ -26,8 +26,8 @@ int main() {
         for (j = 0; j < n; j++) {
 
             buff = arr[i][j];
-            arr[i][j] = arr[n-1-j][n-1-i];
-            arr[n - 1 - j][n - 1 - i] = buff; // Относительно второстепенной диагонали
+            arr[i][j] = arr[m - 1 - i][n - 1 - j];
+            arr[m - 1 - i][n - 1 - j] = buff; // Относительно второстепенной диагонали
 
             cout << arr[i][j] << "\t";
         }
